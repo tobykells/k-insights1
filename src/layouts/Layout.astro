@@ -20,13 +20,17 @@ const { title } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
     </head>
-    <body class="antialiased text-white bg-complementary">
-        <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
-            <div class="flex flex-col w-full max-w-5xl mx-auto grow">
-                <Header />
-                <main class="grow"><slot /></main>
+    <body class="antialiased text-text-custom bg-complementary">
+        <div class="flex flex-col min-h-screen bg-noise">
+            <Header />
+            <div class="w-full h-1" style="background-color: #a06372;"></div>
+            <div class="flex flex-col w-full max-w-5xl mx-auto grow px-6 sm:px-12">
+                <main class="grow py-8"><slot /></main>
                 <Footer />
             </div>
         </div>

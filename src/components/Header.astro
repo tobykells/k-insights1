@@ -1,30 +1,29 @@
 ---
-import Logo from '../components/Logo.astro';
-
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
+    { linkText: 'Clients', href: '/client' },
+    { linkText: 'Experts', href: '/expert' },
+    { linkText: 'Contact', href: '/contact' },
+    { linkText: 'Log in', href: '/login' }
 ];
 ---
 
-<nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-        <Logo />
-    </a>
-    {
-        !!navItems?.length && (
-            <ul class="flex flex-wrap gap-x-4 gap-y-1">
-                {navItems.map((item) => (
-                    <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
-                            {item.linkText}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        )
-    }
-</nav>
+<header class="w-full bg-banner-bg border-b-12 border-banner-border">
+    <nav class="flex items-center justify-between px-6 py-3 max-w-5xl mx-auto sm:px-12">
+        <a href="/" class="flex-shrink-0">
+            <img src="/images/logo.svg" alt="K Insights Logo" width="234" height="98" class="h-24 w-auto sm:h-32" />
+        </a>
+        <ul class="flex gap-6">
+            {navItems.map((item) => (
+                <li>
+                    <a 
+                        href={item.href} 
+                        class="font-bold text-lg hover:opacity-80 transition-opacity"
+                        style="font-family: 'Gowun Batang', serif; color: #221d1e;"
+                    >
+                        {item.linkText}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </nav>
+</header>

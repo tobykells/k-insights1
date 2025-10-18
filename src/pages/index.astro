@@ -1,21 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="K Insights - Expert Network">
+    <div class="max-w-4xl">
+        <h1 class="mb-8" style="font-family: 'Gowun Batang', serif; font-size: 3.5rem; font-weight: 700; line-height: 1.1; color: #221d1e;">
+            Connect with Industry Experts
+        </h1>
+        
+        <p class="mb-12 text-xl" style="color: #221d1e; font-family: 'Gowun Batang', serif;">
+            K Insights connects you with verified experts across industries. 
+            Get strategic guidance, market insights, and specialized knowledge 
+            to drive your business forward.
+        </p>
+
+        <div class="flex gap-4 flex-wrap">
+            <a 
+                href="/client" 
+                class="inline-flex items-center px-6 py-3 font-semibold rounded-lg transition-colors"
+                style="background-color: #221d1e; color: white; font-family: 'Gowun Batang', serif;"
+                onmouseover="this.style.backgroundColor='#a06372'"
+                onmouseout="this.style.backgroundColor='#221d1e'"
+            >
+                Start a Project
+            </a>
+            <a 
+                href="/expert" 
+                class="inline-flex items-center px-6 py-3 font-semibold border-2 rounded-lg transition-colors"
+                style="color: #221d1e; border-color: #221d1e; font-family: 'Gowun Batang', serif;"
+                onmouseover="this.style.backgroundColor='#221d1e'; this.style.color='white'"
+                onmouseout="this.style.backgroundColor='transparent'; this.style.color='#221d1e'"
+            >
+                Join Network
+            </a>
+        </div>
+    </div>
 </Layout>
